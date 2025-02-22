@@ -1,0 +1,20 @@
+#!/bin/bash
+mkdir -p ~/recovered
+cd ~/.local/state/nvim/undo/
+for undo in *; do
+  filename=$(echo "$undo" | sed 's/%/\//g')
+  target="~/recovered/$filename"
+  mkdir -p "$(dirname "$target")"
+  if [ -r "$undo" ]; then
+    touch "$target"
+    nvim -u NONE "$target" -c "silent! rundo ~/.local/state/nvim/undo/$undo" -c "w! $target" -c "q"
+    if [ -s "$target" ]; then
+      echo "Recovered: $filename"
+    else
+      echo "Failed or empty: $filename"
+      rm "$target"
+    fi
+  else
+    echo "Skipping $filename"
+  fi
+done

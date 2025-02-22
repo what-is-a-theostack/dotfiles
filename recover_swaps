@@ -1,0 +1,7 @@
+#!/bin/bash
+mkdir -p ~/recovered
+for swp in ~/.local/state/nvim/swap/*.{swp,swo,swa}; do
+  base=$(basename "$swp" | sed 's/\.sw[opa]$//')
+  filename=$(echo "$base" | sed 's/%/\//g' | sed 's/^\.//')
+  nvim -r "$swp" -c ":w! ~/recovered/$filename-$(basename $swp)" -c ":q"
+done

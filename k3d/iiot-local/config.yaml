@@ -1,0 +1,12 @@
+UnDo
+E  - description: 'Source: Embedded, Destination: Magic shortcut path'
+2    updateDefaultKubeconfig: true # add new cluste
+    hostname
+  create: # creates a default
+$token: superSecretToken # same as `-
+c  name: mycluster # name that you want to give to your cluster (will still be prefixed with `k3d-`)5
+E  - description: 'Source: Embedded, Destination: Magic shortcut path'
+S  - description: 'Source: Relative, Destination: Absolute path, Node: Servers only'
+    - "server:*"
+  config: | # define contents of the `registries.yaml` file (or reference a file); same as `--registry-config /path/to/config.yaml`
+    hostnames: 5

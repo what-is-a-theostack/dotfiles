@@ -1,0 +1,24 @@
+UnDo
+apiVersion: v1
+kind: Config
+pref5
+  name: development5
+  name: test5
+    
+  name: iiot5
+  name: streampipes5
+  name: rancher5
+- cluster:5
+  name: minikube5
+- cluster:
+  name: development
+- cluster:
+  name: test
+- name: developer
+- name: experimenter
+- context:
+  name: dev-frontend
+- context:
+  name: dev-storage
+- context:
+  name: exp-test5

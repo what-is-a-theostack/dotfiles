@@ -1,0 +1,4 @@
+UnDo
+mleft = ["mode", "spacer", "version-control" ,"spinner", "read-only-indicator", "file-modification-indicator"]
+mleft = ["mode", "spacer", "version-control" ,"spinner", "read-only-indicator", "file-modification-indicator"]
+Ya = ["ensure_selections_forward", "collapse_selection", "move_char_right", "insert_mode"]5
